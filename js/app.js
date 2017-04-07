@@ -1,10 +1,25 @@
 //sanity check
-console.log('Jesus!')
-// wait for the DOM to finish loading
+console.log('Working!')
+
 
 $(document).ready(function() {
-  
-})
+
+  $('#board').on('click', placeMark);
+
+  function placeMark(event) {
+    // target is div clicked
+    // console.log(event.target);
+    $clickedBox = $(event.target);
+    $clickedBox.children().first().text('X');
+  }
+
+
+
+
+
+});
+
+
 
 // second attempt
 
