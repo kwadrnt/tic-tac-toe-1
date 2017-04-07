@@ -5,18 +5,39 @@ console.log('Working!')
 $(document).ready(function() {
 
   $('#board').on('click', placeMark);
-
+  
+  var currentPlayer = 'X';
+  
   function placeMark(event) {
     // target is div clicked
     // console.log(event.target);
     $clickedBox = $(event.target);
-    $clickedBox.children().first().text('X');
+    if($clickedBox.children().first().text === '') {
+      
+      $clickedBox.children().first().text(currentPlayer);
+      if (currentPlayer === 'X') {
+      currentPlayer = 'O';
+      } else {
+      currentPlayer = 'X';
+      }
+    }
+    
+    $clickedBox.children().first().text(currentPlayer);
+    if (currentPlayer === 'X') {
+      currentPlayer = 'O';
+    } else {
+      currentPlayer = 'X';
+    }
+    checkForGameOver();
   }
+  function checkForGameOver() {
+    // check if somebody won if so, send a message, if not allow play to continue
+    if($('top .left').children().first().text() === $('top .center').children().first().text() === $('top .right').children().first().text()) {
+      console.log('win');
+    }
+  
 
-
-
-
-
+  }
 });
 
 
