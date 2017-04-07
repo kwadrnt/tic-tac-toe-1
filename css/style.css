@@ -1,24 +1,22 @@
 #board {
   margin-top: 10px;
+  
 }
 
 .box {
   border: 5px solid blue;
   height: 150px;
-  float: left;
   background-color: yellow;
-  cursor: pointer;
 }
-.btn {
-	background-color: blue;
-	font-weight: bold;
+
+.box:hover {
+  background-color: purple;
 }
-.btn:hover {
-	background-color: red;
+
+.row {
+  margin-bottom: 0;
 }
-.ex {
-	background-color: red;
-}
-.oh {
-	background-color: blue;
+
+#top .mid {
+  background-color: black;
 }
