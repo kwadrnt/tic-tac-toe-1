@@ -21,7 +21,7 @@ $(document).ready(function() {
       currentPlayer = 'X';
       }
     }
-    
+    // for changing turns
     $clickedBox.children().first().text(currentPlayer);
     if (currentPlayer === 'X') {
       currentPlayer = 'O';
